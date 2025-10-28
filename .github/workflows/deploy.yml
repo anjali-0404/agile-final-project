@@ -1,0 +1,31 @@
+name: CI/CD - Deploy (placeholder)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node (example)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          echo "Install dependencies here (npm ci)"
+          # npm ci
+
+      - name: Run tests
+        run: |
+          echo "Run tests here"
+          # npm test
+
+      - name: Deploy to cloud (placeholder)
+        run: |
+          echo "Replace this step with your provider's deployment action (Azure, AWS, GCP)."
